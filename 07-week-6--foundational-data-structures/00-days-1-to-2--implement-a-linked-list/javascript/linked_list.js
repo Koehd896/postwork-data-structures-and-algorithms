@@ -28,7 +28,13 @@ class LinkedList {
   // find the node with the target value and return it
   // if not found return null, use your iterate method to be DRY!
   find(target) {
-
+    let result = null
+    this.iterate(node => {
+      if (node.value === target) {
+        result = node;
+      }
+    })
+    return result;
   }
 
   // add the node to the start of the list, no nodes should be removed

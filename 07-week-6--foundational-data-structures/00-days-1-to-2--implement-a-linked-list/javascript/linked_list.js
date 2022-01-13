@@ -1,11 +1,22 @@
-class LinkedList {
+class Node {
   constructor(value = null, next = null) {
     this.value = value;
     this.next = next;
+  } 
+}
+
+class LinkedList {
+  constructor(head = null) {
+    this.head = head;
   }
 
-  iterate() {
-
+  iterate(callback) {
+    let current = this.head;
+    while ( current ){
+      callback(current);
+      current = current.next
+    }
+    return (this.head)
   }
 
   // print each node's value on its own line
@@ -57,12 +68,6 @@ class LinkedList {
   // remove the node at the given index, and return it
   remove(idx) {
 
-  }
-}
-
-class Node {
-  constructor() {
-    
   }
 }
 

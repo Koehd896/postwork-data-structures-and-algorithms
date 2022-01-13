@@ -22,7 +22,7 @@ class LinkedList {
   // print each node's value on its own line
   // use your iterate method to be DRY! Don't get caught in the code rain, brrr.
   print() {
-
+    this.iterate(node => console.log(node.value))
   }
 
   // find the node with the target value and return it
